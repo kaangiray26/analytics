@@ -13,15 +13,15 @@ createApp({
 
         async function setup() {
             // Get sites data
-            const response = await fetch("http://localhost:5000/sites").then(
-                (res) => res.json(),
-            );
+            const response = await fetch(
+                window.location.origin + "/sites",
+            ).then((res) => res.json());
             sites.value = response.sites.map((arr) => arr[0]);
             get_site(sites.value[0]);
         }
 
         async function get_site(site) {
-            const response = await fetch("http://localhost:5000/site", {
+            const response = await fetch(window.location.origin + "/site", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
