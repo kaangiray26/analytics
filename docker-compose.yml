@@ -1,0 +1,11 @@
+services:
+    web:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: on-failure
+        ports:
+            - "5000:5000"
+        environment:
+            SITES: "null, site1, site2"
+            ADDRESS: "127.0.0.1:5000"

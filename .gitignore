@@ -1,0 +1,5 @@
+env
+*.db
+*.wal
+__pycache__
+docker-compose-dev.yml
