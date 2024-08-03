@@ -1,7 +1,22 @@
-# analytics
-Simple, open-source web analytics alternative
-
-![Analytics](https://kaangiray26.github.io/analytics/screenshot.png)
+<div align="center">
+    <a href="https://github.com/kaangiray26/analytics">
+        <img src="https://kaangiray26.github.io/analytics/screenshot.png" alt="Analytics Logo">
+    </a>
+    <h1 align="center">analytics</h1>
+    <p align="center">
+        Simple, open-source web analytics alternative
+        <br />
+        <div align="center">
+            <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/kaangiray26/analytics?style=flat-square">
+            <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/kaangiray26/analytics?style=flat-square">
+            <img alt="GitHub issues" src="https://img.shields.io/github/issues/kaangiray26/analytics?style=flat-square">
+            <img alt="License" src="https://img.shields.io/github/license/kaangiray26/analytics.svg?style=flat-square">
+        </div>
+        <a href="https://github.com/kaangiray26/analytics/issues">Report Bug</a>
+        ·
+        <a href="https://github.com/kaangiray26/analytics/issues">Request Feature</a>
+    </p>
+</div>
 
 ## About
 This project is a simple, open-source web analytics alternative. It uses a beacon to send data to the server. The server stores the data in a DuckDB database. The data is then visualized using a simple web interface.
