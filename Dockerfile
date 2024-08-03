@@ -1,4 +1,4 @@
-FROM python:3.12.4-alpine3.20
+FROM python:3.12-slim
 WORKDIR /app
 
 # Copy files
@@ -8,7 +8,7 @@ COPY wsgi.py .
 COPY static ./static
 
 # Install dependencies
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt --upgrade
 
 # Run the application
 CMD ["python", "wsgi.py"]

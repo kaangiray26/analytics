@@ -16,10 +16,10 @@ CORS(app)
 
 # Configuration
 sites = os.environ.get("SITES", "null").split(", ")
-addresses = ["localhost:5000"]
 address = os.environ.get("ADDRESS", None)
-if address:
-    addresses.append(address)
+if not address:
+    raise ValueError("ADDRESS environment variable not set")
+    exit(1)
 
 # DuckDB connection
 con = duckdb.connect("sites.db")
@@ -55,7 +55,7 @@ def before_request():
     if request.path == "/beacon":
         return
     # Only allow requests from the local network
-    if request.host not in addresses:
+    if request.host != address:
         return Response("Forbidden", status=403)
 
 @app.route("/", methods=["GET"])
