@@ -31,8 +31,19 @@ To add analytics to your website, add the following script to your website, and 
 
 Or you can use the following script to add analytics to your website:
 ```
-<script defer data-addr="http://127.0.0.1:5000/beacon">
-(function(addr){window.addEventListener("DOMContentLoaded",()=>{fetch(addr,{method:"POST",headers:{"Content-Type":"application/json",},body:JSON.stringify({origin:window.location.origin,path:window.location.pathname,}),})})})(document.currentScript.getAttribute("data-addr"))
+<script defer>
+    (function () {
+        window.addEventListener("DOMContentLoaded", () => {
+            fetch("https://home.buzl.uk:8443/analytics/beacon", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    origin: window.location.origin,
+                    path: window.location.pathname,
+                }),
+            });
+        });
+    })();
 </script>
 ```
 
